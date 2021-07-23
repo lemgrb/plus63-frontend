@@ -1,0 +1,111 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+$primary: #000000;
+$secondary: #f8be42;
+$lottoSection: $primary;
+$digitSection: #CE1126;
+$stlVisayasSection: #FCD116;
+$stlMindanaoSection: #0038A8;
+
+.gameresultcard {
+
+  border-left-width: 0.25rem;
+
+  h1 {
+    font-size: 1.25rem;
+    padding: 5px;
+  }
+
+  time {
+    font-size: 0.85rem;
+    font-family: 'Inter';
+    padding: 5px 10px 5px 10px;
+    border-radius: 50px 20px;
+    // border-radius: 5px 10px 5px;
+  }
+
+  p {
+    padding-left: 5px;
+  }
+
+  img {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }
+
+}
+
+.jackpot {
+  font-weight: bold;
+}
+
+.cardBody {
+  padding: 0;
+  margin: 0;
+}
+
+.result {
+  display: inline-block;
+  color: $primary;
+  font-size: 1.5rem;
+}
+
+.cardLink {
+  color: inherit !important;
+  text-decoration: none !important;
+
+  :active {
+    background: $gray-300;
+  }
+}
+
+.lottoSection {
+  border-left-color: $lottoSection;
+  time {
+    background: $lottoSection;
+    color: $white;
+  }
+}
+
+.digitSection {
+  border-left-color: $digitSection;
+  time {
+    background: $digitSection;
+    color: $white;
+  }
+}
+
+.stlVisayasSection {
+  border-left-color: $stlVisayasSection;
+  time {
+    background: $stlVisayasSection;
+  }
+}
+
+.stlMindanaoSection {
+  border-left-color: $stlMindanaoSection;
+  time {
+    background: $stlMindanaoSection;
+    color: $white;
+  }
+}
+
+.resultDigit {
+  display: inline-block;
+  color: $primary;
+  background: $stlVisayasSection;
+  background: radial-gradient(circle at 65% 15%, white 1px, $stlVisayasSection 3%, orange 60%, $stlVisayasSection 100%);  
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 1.25rem;
+  text-align: center;
+  line-height: 2.5rem;
+  margin-right: 2px;
+  // box-shadow: 0px 0px 0px 1px $primary;
+}
