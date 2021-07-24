@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
     <header>
-      <h1 className="text-center"><Link href="/">plus63.co</Link></h1> 
+      <h1><Link href="/"><a><img src="/logo.webp" alt="Main logo of PCSOresults.today" width="64" height="64"/></a></Link></h1> 
     </header>
     <div className="container-fluid">
       <Component {...pageProps} />

@@ -29,38 +29,38 @@ const Home = (props) => {
 
   useEffect(()=>{
     const data = JSON.parse(localStorage.getItem('showInfo'));
-    console.log("localStorage: "+ data);
     setShowInfo(data);
-    console.log("useEffect[]: "+ data + " as " +  typeof data);
   },[]);
 
   useEffect(()=>{
     localStorage.setItem('showInfo', showInfo);
-    console.log("useEffect[showInfo]: " + showInfo);
   },[showInfo]);
 
   const handleInfoClick = () => {
     setShowInfo(!showInfo);
-    console.log("handleInfoClick()");
   }
 
 
   return (
     <>
     <Head>
-      <meta name="description" content="See the different PCSO Lotto and Swertres game results updated daily." />
-      <title>plus63.co: PCSO Lotto and Swertres Results Today</title>
+      <meta name="description" content="PCSO Lotto and Swertres results today (Philippines)" />
+      <meta property="og:url" content="https://pcsoresults.today" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="PCSO Lotto and Swertres results today (Philippines)" />
+      <meta property="og:description" content="PCSO Lotto and Swertres results today (Philippines)" />
+      <meta property="og:image" content="https://pcsoresults.today/fbog.webp.gz" />
+      <title>PCSOResults.today | PCSO Lotto and Swertres Results Today</title>
     </Head>
     <main>
       <Row>
         <Col>
-          <div className="callout callout-info">Note: Tap or click cards to view results history. Use the browser/device back button to go back to previous page.</div>
+          <div className="callout callout-info">Note: <strong>Tap/Click game logos to view results history</strong>. Use the browser/device back button to go back to previous page.</div>
         </Col>
       </Row>
-      <Row className="p-2">
+      <Row className="pb-2">
         <Col>
-          <p>See latest PCSO Lotto results below.</p>
-          <button className="btn btn-primary btn-sm" onClick={handleInfoClick}>{showInfo?"Hide info":"Show info"}</button>
+          <button className="btn btn-primary btn-sm" onClick={handleInfoClick}>{showInfo?"Hide more details":"Show more details"}</button>
         </Col>
       </Row>
       <Row className="g-2">
