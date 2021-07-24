@@ -147,8 +147,18 @@ header {
   height: 74px;
   background: #1e4fad;
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1{
+  display: inline-block;
 }
 
 header img {
-  
+  display: inline-block;  
+}
+
+header a.settings {
+  display: inline-block;
 }
