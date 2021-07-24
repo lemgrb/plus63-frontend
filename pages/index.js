@@ -6,7 +6,6 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const Home = (props) => {
-  
   const [showInfo, setShowInfo] = useState(false);
  
   const LottoResults4D = props.data.filter(result => result.game.Name == "4D Lotto");
@@ -21,7 +20,7 @@ const Home = (props) => {
   const STLSwer3Visayas = props.data.filter(result => result.game.Name == "STL Swer3 (Visayas)");
   
   // Mindanao
-  
+  debugger 
   const STLParesMindanao = props.data.filter(result => result.game.Name == "STL Pares (Mindanao)");
   const STLSwer2Mindanao = props.data.filter(result => result.game.Name == "STL Swer2 (Mindanao)");
   const STLSwer3Mindanao = props.data.filter(result => result.game.Name == "STL Swer3 (Mindanao)");
@@ -96,6 +95,7 @@ const Home = (props) => {
           <GameMultipleResultCard results={LottoResults4D} section={"digit"} showInfo={showInfo}/>
         </Col>
       </Row>
+      {/**
       <Row className="p-2">
         <Col>
           <h2>STL Results (VISAYAS)</h2>
@@ -131,6 +131,7 @@ const Home = (props) => {
           <GameMultipleResultCard results={STLSwer4Mindanao} section={"stlMindanao"}/>
         </Col>
       </Row>
+      **/}
     </main>
     </>
   )

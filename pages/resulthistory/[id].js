@@ -1,15 +1,24 @@
 import axios from 'axios'
+import { Row, Col} from 'react-bootstrap'
 
 const History = (props) => {
   return (
     <>
-    <h1>{props.post[0].game.Name} Results History</h1>
+    <Row>
+      <Col>
+        <div className="callout callout-info">Data migration is still ongoing. Use the browser/device back button to go back to previous page.</div>
+      </Col>
+    </Row>
+    <Row>
+    <Col> 
+    <h1 className="h3 mt-3">{props.post[0].game.Name} Results History</h1>
     <table className="table striped table-striped">
       <thead>
         <tr>
           <th>Date and Time</th>
           <th>Result</th>
           <th>Jackpot</th>
+          <th>Winners</th>
         </tr>
       </thead>
       <tbody>
@@ -17,13 +26,16 @@ const History = (props) => {
           props.post.map(row =>
             <tr key={row.id}>
               <td><time>{new Date(row.datetime).toLocaleString("en-US", {dateStyle: "medium", timeStyle: "medium"})}</time></td>
-              <td>{row.result}</td>
-              <td>{new Number(row.jackpot).toLocaleString()}</td>
+              <td><strong>{row.result}</strong></td>
+              <td>₱{new Number(row.jackpot).toLocaleString()}</td>
+              <td>{row.winners}</td>
             </tr>
           )
         }
       </tbody>
     </table>
+    </Col>
+    </Row>
     </>
   )
 }

@@ -8,7 +8,6 @@ const GameMultipleResultCard = (props) => (
   <Card className={`${styles.gameresultcard} ${clsx(props.section=='digit' && styles.digitSection,
         props.section=='stlVisayas' && styles.stlVisayasSection,
         props.section=='stlMindanao' && styles.stlMindanaoSection)}`}>
-
     <Link href={"/resulthistory/"+props.results[0].game.seopath}>
       <a className={styles.cardLink}>
       {props.results[0].game?.img_url?<Card.Img variant="top" src={props.results[0].game?.img_url} alt={`${props.results[0].game.Name} official logo`}
@@ -36,6 +35,11 @@ aria-label="Link"/>:""}
       </ul>
     </Card.Body>
   <Card.Footer className={styles.cardFooter}> SHARE: <FacebookShareButton url="https://pcsoresults.today" quote={`${props.results[0].game.Name} result (${new Date(props.results[0].datetime).toLocaleString("en-US", {weekday: "long"})} ${new Date(props.results[0].datetime).toLocaleString("en-US", {dateStyle: "long"})}): ${props.results.map(result => new Date(result.datetime).toLocaleString("en-US", {timeStyle:"short"}) + ' : ' + result.result)} `}  hashtag={props.results[0].game.fbhashtag}><FacebookIcon size={32} round={true} /></FacebookShareButton>
+    <Link href={"/resulthistory/"+props.results[0].game.seopath} passHref={true}>
+      <button className="btn btn-secondary btn-sm ms-1">
+         View history
+      </button>
+    </Link>
   </Card.Footer>
   </Card>
 );

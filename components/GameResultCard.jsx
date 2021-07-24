@@ -33,6 +33,11 @@ const GameResultCard = (props) => {
         </p>
       </Card.Body>
       <Card.Footer className={styles.cardFooter}> SHARE: <FacebookShareButton url="https://pcsoresults.today" quote={`${props.game.Name} result (${new Date(props.datetime).toLocaleString("en-US", {weekday: "long"})} ${new Date(props.datetime).toLocaleString("en-US", {dateStyle: "long"})}): ${props.result}`}  hashtag={props.game.fbhashtag}><FacebookIcon size={32} round={true} /></FacebookShareButton>
+      <Link href={"/resulthistory/"+props.game.seopath} passHref={true}>
+        <button className="btn btn-secondary btn-sm ms-1">
+           View history
+        </button>
+      </Link>
       </Card.Footer>
     </Card>
   )

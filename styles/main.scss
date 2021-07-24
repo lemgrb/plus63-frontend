@@ -146,13 +146,14 @@ header {
   width: 100%;
   height: 74px;
   background: #1e4fad;
-  padding: 5px;
   display: flex;
   justify-content: space-between;
+  padding: 0 5px 0 5px;
 }
 
 header h1{
   display: inline-block;
+  line-height: 74px;
 }
 
 header img {
@@ -161,4 +162,5 @@ header img {
 
 header a.settings {
   display: inline-block;
+  line-height: 74px;
 }
