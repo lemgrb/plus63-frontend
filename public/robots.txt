@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://pcsoresults.today
+
+# Sitemaps
+Sitemap: https://pcsoresults.today/sitemap.xml
